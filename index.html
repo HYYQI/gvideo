@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频播放与下载</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        video {
+            width: 100vw;
+            max-width: 100%;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <video id="videoPlayer" controls>
+        <source src="/res/第二十集，信息量极大.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="button-container">
+        <button id="downloadVideo">下载视频</button>
+        <button id="downloadCover">下载封面</button>
+        <button id="downloadAudio">下载音频</button>
+    </div>
+
+    <script>
+        document.getElementById('downloadVideo').addEventListener('click', function() {
+            const videoUrl = '/res/第二十集，信息量极大.mp4';
+            const a = document.createElement('a');
+            a.href = videoUrl;
+            a.download = '2024-02-13_20-32-54_第二十集，信息量极大#深度还原#一人分饰多角#内容过于真实#剧情.mp4';
+            a.click();
+        });
+
+        document.getElementById('downloadCover').addEventListener('click', function() {
+            const coverUrl = '/res/第二十集，信息量极大_cover.jpg'; // 假设封面图片是cover.jpg
+            const a = document.createElement('a');
+            a.href = coverUrl;
+            a.download = '2024-02-13_20-32-54_第二十集，信息量极大#深度还原#一人分饰多角#内容过于真实#剧情_cover.jpg';
+            a.click();
+        });
+
+        document.getElementById('downloadAudio').addEventListener('click', function() {
+            const audioUrl = '/res/第二十集，信息量极大_music.mp3'; // 假设音频文件是audio.mp3
+            const a = document.createElement('a');
+            a.href = audioUrl;
+            a.download = '2024-02-13_20-32-54_第二十集，信息量极大#深度还原#一人分饰多角#内容过于真实#剧情_audio.mp3';
+            a.click();
+        });
+    </script>
+</body>
+</html>
