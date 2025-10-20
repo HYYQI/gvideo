@@ -33,7 +33,7 @@
 </head>
 <body>
     <video id="videoPlayer" controls>
-        <source src="/res/video.mp4" type="video/mp4">
+        <source src="res/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="button-container">
@@ -44,7 +44,7 @@
 
     <script>
         document.getElementById('downloadVideo').addEventListener('click', function() {
-            const videoUrl = '/res/video.mp4';
+            const videoUrl = 'res/video.mp4';
             const a = document.createElement('a');
             a.href = videoUrl;
             a.download = '2024-02-13_20-32-54_第二十集，信息量极大#深度还原#一人分饰多角#内容过于真实#剧情.mp4';
@@ -52,7 +52,7 @@
         });
 
         document.getElementById('downloadCover').addEventListener('click', function() {
-            const coverUrl = '/res/cover.jpg'; // 假设封面图片是cover.jpg
+            const coverUrl = 'res/cover.jpg'; // 假设封面图片是cover.jpg
             const a = document.createElement('a');
             a.href = coverUrl;
             a.download = '2024-02-13_20-32-54_第二十集，信息量极大#深度还原#一人分饰多角#内容过于真实#剧情_cover.jpg';
@@ -60,7 +60,7 @@
         });
 
         document.getElementById('downloadAudio').addEventListener('click', function() {
-            const audioUrl = '/res/audio.mp3'; // 假设音频文件是audio.mp3
+            const audioUrl = 'res/audio.mp3'; // 假设音频文件是audio.mp3
             const a = document.createElement('a');
             a.href = audioUrl;
             a.download = '2024-02-13_20-32-54_第二十集，信息量极大#深度还原#一人分饰多角#内容过于真实#剧情_audio.mp3';
